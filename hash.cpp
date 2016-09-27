@@ -1,6 +1,10 @@
 #include "hash.h"
 #include <iostream>
 
+/*
+ * This file is designed to be the implementations of the members listed in hash.h.  It will also provide the function definitions for the spellcheck.cpp file.
+*/
+
 using namespace std;
 
 hashTable::hashTable(int size) {
@@ -99,6 +103,7 @@ bool hashTable::rehash() {
     }
     filled = 0;
     capacity = getPrime(capacity);
+
     try {
         data.resize(capacity);
     } catch(exception& e) {
